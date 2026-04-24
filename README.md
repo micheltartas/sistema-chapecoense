@@ -50,7 +50,7 @@ sistema-chapecoense/
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/sistema-chapecoense.git
+git clone https://github.com/micheltartas/sistema-chapecoense.git
 cd sistema-chapecoense
 ```
 
