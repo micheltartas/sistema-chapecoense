@@ -1,0 +1,51 @@
+nome,cpf,email,telefone,data_nascimento,plano,status,data_cadastro
+Ana Paula Rodrigues,111.222.333-44,ana@email.com,(49) 99801-1111,15/03/1990,Sócio Torcedor,ativo,10/01/2022
+Bruno Costa Lima,222.333.444-55,bruno@email.com,(49) 99801-2222,22/07/1985,Sócio Campeão,ativo,05/02/2022
+Carla Mendes Souza,333.444.555-66,carla@email.com,(49) 99801-3333,30/11/1995,Sócio Torcedor,inadimplente,20/06/2021
+Diego Ferreira Neto,444.555.666-77,,49998014444,08/04/1988,Sócio Campeão,ativo,01/03/2023
+Elisa Gomes Pereira,555.666.777-88,elisa@email.com,(49) 99801-5555,14/09/2000,Sócio Torcedor,inativo,15/11/2020
+Fernando Alves,666.777.888-99,fernando@email.com,(49) 99801-6666,25/12/1979,Sócio Campeão,ativo,03/07/2021
+Gabriela Santos,777.888.999-00,gabriela@email.com,,12/05/1993,Sócio Torcedor,ativo,18/04/2022
+Henrique Oliveira,888.999.000-11,,,(49)998018888,Sócio Torcedor,ativo,22/08/2020
+Isabela Martins,999.000.111-22,isabela@email.com,(49) 99801-9999,31/02/1991,Sócio Campeão,ativo,09/01/2023
+João Pedro Silva,000.111.222-33,joao@email.com,(49) 99801-0000,07/10/1987,Sócio Torcedor,inadimplente,14/05/2019
+Karina Ramos,111.333.555-77,karina@email.com,(49) 99802-1111,19/06/1996,Sócio Campeão,ativo,27/02/2022
+Lucas Barbosa,222.444.666-88,lucas@email.com,(49) 99802-2222,03/08/1984,Sócio Torcedor,ativo,11/09/2021
+Mariana Castro,333.555.777-99,mariana@email.com,(49) 99802-3333,28/02/1998,Sócio Torcedor,ativo,06/06/2022
+Nicolas Rocha,444.666.888-00,nicolas@email.com,(49) 99802-4444,15/11/1990,Sócio Campeão,inativo,30/10/2020
+Olivia Teixeira,555.777.999-11,olivia@email.com,(49) 99802-5555,09/04/2001,Sócio Torcedor,ativo,23/03/2023
+Paulo Henrique,666.888.000-22,,,(49)998026666,,Sócio Torcedor,ativo,17/12/2021
+Quintino Dias,777.999.111-33,quintino@email.com,(49) 99802-7777,21/07/1977,Sócio Campeão,ativo,08/01/2022
+Renata Freitas,888.000.222-44,renata@email.com,(49) 99802-8888,14/03/1994,Sócio Torcedor,inadimplente,19/07/2020
+Sergio Monteiro,999.111.333-55,sergio@email.com,(49) 99802-9999,05/09/1982,Sócio Campeão,ativo,02/04/2022
+Tatiana Lopes,000.222.444-66,tatiana@email.com,(49) 99803-0000,18/01/1999,Sócio Torcedor,ativo,25/08/2022
+Ulisses Cardoso,111.444.777-00,ulisses@email.com,(49) 99803-1111,11/06/1975,Sócio Torcedor,inativo,13/02/2021
+Vanessa Pinto,222.555.888-11,vanessa@email.com,(49) 99803-2222,24/10/1997,Sócio Campeão,ativo,07/11/2022
+Wagner Souza,333.666.999-22,,49998033333,29/03/1986,Sócio Torcedor,ativo,16/05/2021
+Xuxa Ribeiro,444.777.000-33,xuxa@email.com,(49) 99803-4444,06/08/2003,Sócio Torcedor,ativo,20/09/2022
+Yasmin Almeida,555.888.111-44,yasmin@email.com,(49) 99803-5555,13/12/2000,Sócio Campeão,inadimplente,04/01/2023
+Zeca Ferreira,666.999.222-55,zeca@email.com,(49) 99803-6666,02/05/1971,Sócio Torcedor,ativo,28/06/2020
+Amanda Nogueira,777.000.333-66,amanda@email.com,(49) 99803-7777,17/09/1993,Sócio Campeão,ativo,12/03/2022
+Bernardo Cruz,888.111.444-77,,,(49)998038888,,Sócio Torcedor,ativo,01/10/2021
+Cecilia Vieira,999.222.555-88,cecilia@email.com,(49) 99803-9999,26/04/1988,Sócio Torcedor,ativo,15/07/2022
+Danilo Moreira,000.333.666-99,danilo@email.com,(49) 99804-0000,08/11/1995,Sócio Campeão,inativo,09/12/2020
+Eduardo Lima,12345,eduardo@email.com,(49) 99804-1111,20/06/1980,Sócio Torcedor,ativo,23/04/2022
+Fernanda Azevedo,222.777.111-33,fernanda@email.com,(49) 99804-2222,03/01/2002,Sócio Campeão,ativo,17/08/2022
+Gustavo Nascimento,333.888.222-44,gustavo@email.com,(49) 99804-3333,15/07/1978,Sócio Torcedor,ativo,06/02/2021
+Helena Campos,444.999.333-55,helena@email.com,(49) 99804-4444,28/11/1991,Sócio Torcedor,inadimplente,30/09/2022
+Igor Mendes,555.000.444-66,,49998045555,10/08/1984,Sócio Campeão,ativo,14/06/2021
+Julia Correia,666.111.555-77,julia@email.com,(49) 99804-6666,22/03/1999,Sócio Torcedor,ativo,08/01/2023
+Kevin Araújo,777.222.666-88,kevin@email.com,(49) 99804-7777,05/12/1997,Sócio Campeão,ativo,21/05/2022
+Laura Batista,888.333.777-99,laura@email.com,(49) 99804-8888,18/06/1985,Sócio Torcedor,inativo,03/11/2020
+Marcos Cavalcante,,marcos@email.com,(49) 99804-9999,01/09/1976,Sócio Torcedor,ativo,27/07/2022
+Natalia Duarte,000.555.999-22,natalia@email.com,(49) 99805-0000,14/02/1994,Sócio Campeão,ativo,11/04/2022
+Otavio Farias,111.666.000-33,otavio@email.com,(49) 99805-1111,27/10/1989,Sócio Torcedor,ativo,05/09/2021
+Patricia Godoy,222.777.111-44,patricia@email.com,(49) 99805-2222,09/05/2001,Sócio Campeão,ativo,19/03/2023
+Rodrigo Henriques,333.888.222-55,rodrigo@email.com,(49) 99805-3333,31/02/1983,Sócio Torcedor,inadimplente,13/08/2021
+Sabrina Ivo,444.999.333-66,sabrina@email.com,(49) 99805-4444,16/12/1996,Sócio Torcedor,ativo,26/01/2022
+Thiago Jardim,555.000.444-77,thiago@email.com,(49) 99805-5555,04/07/1979,Sócio Campeão,ativo,10/10/2022
+Ursula Klein,666.111.555-88,ursula@email.com,(49) 99805-6666,20/03/1992,Sócio Torcedor,ativo,24/06/2021
+Vitor Lacerda,777.222.666-99,vitor@email.com,(49) 99805-7777,07/11/2000,Sócio Campeão,inativo,18/02/2022
+Wanda Melo,888.333.777-00,wanda@email.com,(49) 99805-8888,23/08/1987,Sócio Torcedor,ativo,01/12/2022
+Xande Nunes,999.444.888-11,xande@email.com,(49) 99805-9999,11/04/1995,Sócio Torcedor,ativo,15/05/2021
+Yara Oliveira,000.555.999-22,yara@email.com,(49) 99806-0000,30/01/2003,Sócio Campeão,ativo,29/09/2022

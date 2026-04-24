@@ -1,0 +1,382 @@
+/* ============================================================
+   Sistema Chapecoense — Tema sobre Bootstrap 5
+   Cores oficiais: Verde #1a7a3c · Branco #ffffff
+   ============================================================ */
+
+:root {
+  --chap-verde:        #1a7a3c;
+  --chap-verde-esc:    #145e2e;
+  --chap-verde-claro:  #e8f5ee;
+  --chap-verde-mid:    #2d9e55;
+  --chap-branco:       #ffffff;
+  --chap-cinza-bg:     #f4f6f5;
+  --chap-cinza-borda:  #d8e4dc;
+  --chap-sidebar-bg:   #0f4a24;
+  --chap-sidebar-esc:  #0a3319;
+  --chap-texto-muted:  #6c8c77;
+}
+
+/* ── GLOBAL ───────────────────────────────────────────────── */
+body {
+  background: var(--chap-cinza-bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.btn-chap {
+  background-color: var(--chap-verde);
+  border-color: var(--chap-verde);
+  color: #fff;
+  font-weight: 500;
+}
+.btn-chap:hover, .btn-chap:focus {
+  background-color: var(--chap-verde-esc);
+  border-color: var(--chap-verde-esc);
+  color: #fff;
+}
+
+.btn-chap-outline {
+  color: var(--chap-verde);
+  border-color: var(--chap-verde);
+  background: transparent;
+  font-weight: 500;
+}
+.btn-chap-outline:hover {
+  background-color: var(--chap-verde);
+  color: #fff;
+}
+
+/* ── LOGIN ────────────────────────────────────────────────── */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--chap-sidebar-esc) 0%, var(--chap-verde) 100%);
+  padding: 1rem;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.login-header {
+  background: var(--chap-verde);
+  padding: 32px 32px 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.login-escudo {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-titulo {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  letter-spacing: .5px;
+}
+
+.login-subtitulo {
+  font-size: 13px;
+  opacity: .85;
+  margin: 0;
+}
+
+.login-form {
+  padding: 28px 32px 20px;
+}
+
+.login-form .form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.login-form .input-group-text {
+  background: var(--chap-verde-claro);
+  border-color: var(--chap-cinza-borda);
+  color: var(--chap-verde);
+}
+
+.login-form .form-control {
+  border-color: var(--chap-cinza-borda);
+  font-size: 14px;
+}
+
+.login-form .form-control:focus {
+  border-color: var(--chap-verde);
+  box-shadow: 0 0 0 .2rem rgba(26,122,60,.15);
+}
+
+.login-footer {
+  padding: 12px 32px 20px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--chap-texto-muted);
+  border-top: 1px solid var(--chap-cinza-borda);
+}
+
+/* ── LAYOUT PRINCIPAL ─────────────────────────────────────── */
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--chap-sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+}
+
+.app-main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 28px 32px;
+  min-height: 100vh;
+}
+
+/* ── SIDEBAR ──────────────────────────────────────────────── */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  background: var(--chap-sidebar-esc);
+}
+
+.sidebar-escudo { font-size: 28px; flex-shrink: 0; }
+
+.sidebar-nome {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.sidebar-slogan {
+  font-size: 11px;
+  color: rgba(255,255,255,.5);
+  margin-top: 1px;
+}
+
+.nav-section-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.35);
+  padding: 16px 18px 6px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: rgba(255,255,255,.65);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+
+.nav-item i { font-size: 16px; width: 18px; text-align: center; }
+.nav-item:hover { background: rgba(255,255,255,.08); color: #fff; }
+.nav-item.active {
+  background: var(--chap-verde-mid);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+.sidebar-footer {
+  padding: 14px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.sidebar-usuario {
+  font-size: 12px;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 8px;
+  line-height: 1.5;
+  padding: 0 2px;
+}
+
+.sidebar-usuario strong { color: #fff; display: block; font-size: 13px; }
+
+.badge-perfil {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--chap-verde-mid);
+  color: #fff;
+  margin-top: 3px;
+}
+
+.btn-logout {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.6);
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .15s;
+}
+.btn-logout:hover {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  border-color: rgba(255,255,255,.35);
+}
+
+/* ── PÁGINA ───────────────────────────────────────────────── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-title { font-size: 22px; font-weight: 700; color: #1a1a1a; margin: 0; }
+.page-subtitle { font-size: 13px; color: var(--chap-texto-muted); margin-top: 2px; }
+
+/* ── CARDS ────────────────────────────────────────────────── */
+.card {
+  border: 1px solid var(--chap-cinza-borda);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.card-header-chap {
+  background: var(--chap-verde);
+  color: #fff;
+  border-radius: 11px 11px 0 0;
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── DASHBOARD ────────────────────────────────────────────── */
+.dash-stat {
+  background: #fff;
+  border: 1px solid var(--chap-cinza-borda);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  height: 100%;
+}
+
+.dash-stat-icone { font-size: 22px; margin-bottom: 10px; display: block; }
+.dash-stat-valor { font-size: 32px; font-weight: 700; line-height: 1; margin-bottom: 6px; }
+.dash-stat-label {
+  font-size: 11px;
+  color: var(--chap-texto-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.dash-stat.verde    { border-left: 4px solid var(--chap-verde); }
+.dash-stat.verde    .dash-stat-valor { color: var(--chap-verde); }
+.dash-stat.vermelho { border-left: 4px solid #dc3545; }
+.dash-stat.vermelho .dash-stat-valor { color: #dc3545; }
+.dash-stat.amarelo  { border-left: 4px solid #f59e0b; }
+.dash-stat.amarelo  .dash-stat-valor { color: #f59e0b; }
+.dash-stat.cinza    { border-left: 4px solid #6c757d; }
+.dash-stat.cinza    .dash-stat-valor { color: #6c757d; }
+
+/* ── TABELAS ──────────────────────────────────────────────── */
+.table thead th {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--chap-texto-muted);
+  border-bottom: 2px solid var(--chap-cinza-borda);
+  background: #fafafa;
+  padding: 10px 14px;
+}
+
+.table tbody td {
+  font-size: 13px;
+  padding: 11px 14px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody tr:hover { background: var(--chap-verde-claro); }
+
+/* ── BADGES DE STATUS ─────────────────────────────────────── */
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-ativo        { background: #dcfce7; color: #166534; }
+.badge-inativo      { background: #f1f5f9; color: #64748b; }
+.badge-inadimplente { background: #fee2e2; color: #991b1b; }
+.badge-paga         { background: #dcfce7; color: #166534; }
+.badge-pendente     { background: #fef9c3; color: #854d0e; }
+.badge-atrasada     { background: #fee2e2; color: #991b1b; }
+.badge-admin        { background: #ede9fe; color: #4c1d95; }
+.badge-secretaria   { background: #dcfce7; color: #166534; }
+.badge-financeiro   { background: #fef9c3; color: #854d0e; }
+
+/* ── FORMULÁRIOS ──────────────────────────────────────────── */
+.form-control:focus, .form-select:focus {
+  border-color: var(--chap-verde);
+  box-shadow: 0 0 0 .2rem rgba(26,122,60,.15);
+}
+
+.form-label { font-size: 13px; font-weight: 500; color: #444; margin-bottom: 4px; }
+
+/* ── MODAIS ───────────────────────────────────────────────── */
+.modal-header {
+  background: var(--chap-verde);
+  color: #fff;
+}
+.modal-header .btn-close { filter: invert(1); }
+.modal-title { font-size: 15px; font-weight: 600; }
+
+/* ── ESTADO VAZIO ─────────────────────────────────────────── */
+.estado-vazio {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--chap-texto-muted);
+}
+.estado-vazio i { font-size: 40px; display: block; margin-bottom: 12px; opacity: .4; }
+.estado-vazio p { font-size: 14px; margin: 0; }
