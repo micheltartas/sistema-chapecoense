@@ -13,7 +13,7 @@ sistema-chapecoense/
 ├── backend/              ← servidor Node.js + API REST
 │   ├── config/           ← conexão com o banco de dados
 │   ├── middlewares/      ← autenticação JWT
-│   ├── routes/           ← rotas da API (sócios, mensalidades, etc.)
+│   ├── routes/           ← rotas da API
 │   └── server.js         ← entrada da aplicação
 │
 ├── frontend/             ← interface do usuário
@@ -23,10 +23,10 @@ sistema-chapecoense/
 │
 ├── database/             ← tudo relacionado ao banco de dados
 │   ├── migrations/       ← scripts que criam as tabelas
-│   ├── seeds/            ← dados iniciais (planos, usuários, exemplos)
-│   └── scripts/          ← script de migração do CSV (Módulo V)
+│   ├── seeds/            ← dados iniciais
+│   └── scripts/          ← script de migração CSV (Módulo V)
 │
-├── .env.example          ← modelo de configuração — copie para .env
+├── .env.example          ← modelo de configuração
 ├── .gitignore
 ├── package.json
 └── README.md
@@ -40,12 +40,17 @@ sistema-chapecoense/
 |-------------|---------------|---------------------|
 | Node.js     | 18 LTS        | `node --version`    |
 | npm         | 9+            | `npm --version`     |
-| PostgreSQL  | 14+           | `psql --version`    |
+| PostgreSQL  | 14+           | pgAdmin 4 abre sem erro |
+| pgAdmin     | 4             | interface gráfica   |
 | Git         | qualquer      | `git --version`     |
 
 ---
 
-## Instalação passo a passo
+## Instalação
+
+> 💡 **Alunos do SENAI:** siga o **Guia de Instalação** disponível na base de conhecimento do Notion — ele cobre cada etapa com mais detalhes, incluindo o passo a passo no pgAdmin 4.
+
+Para referência técnica, os passos resumidos são:
 
 ### 1. Clonar o repositório
 
@@ -54,47 +59,34 @@ git clone https://github.com/micheltartas/sistema-chapecoense.git
 cd sistema-chapecoense
 ```
 
-### 2. Instalar as dependências
+### 2. Criar banco e usuário
 
-```bash
-npm install
-```
-
-Em produção, instale apenas o necessário:
-
-```bash
-npm install --omit=dev
-```
-
-### 3. Criar o banco de dados e o usuário
-
-Conecte ao PostgreSQL como superusuário e execute:
+No pgAdmin 4, conectado como `postgres`:
+- Crie a **Login/Group Role** `app_chapecoense` com senha forte — sem nenhum privilege administrativo, apenas **Can login**
+- Crie o **Database** `chapecoense_dev` com owner `app_chapecoense`
+- No **Query Tool** do banco, execute:
 
 ```sql
-CREATE USER app_chapecoense WITH PASSWORD 'defina_uma_senha_forte';
-CREATE DATABASE chapecoense_dev OWNER app_chapecoense;
-GRANT ALL PRIVILEGES ON DATABASE chapecoense_dev TO app_chapecoense;
+GRANT USAGE ON SCHEMA public TO app_chapecoense;
+GRANT CREATE ON SCHEMA public TO app_chapecoense;
 ```
 
-Para **produção**, substitua `chapecoense_dev` por `chapecoense_prod`.
-
-### 4. Configurar as variáveis de ambiente
+### 3. Configurar as variáveis de ambiente
 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
-Edite o `.env` com suas configurações:
-
+Edite o `.env`:
 ```bash
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=chapecoense_dev
 DB_USER=app_chapecoense
-DB_PASS=a_senha_definida_acima
+DB_PASS=sua_senha_aqui
 NODE_ENV=development
 PORT=3000
-JWT_SECRET=gere_uma_chave_aleatoria_aqui
+JWT_SECRET=gere_uma_chave_longa_aqui
 ```
 
 > 💡 Para gerar um JWT_SECRET seguro:
@@ -102,27 +94,39 @@ JWT_SECRET=gere_uma_chave_aleatoria_aqui
 > node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 > ```
 
-### 5. Executar as migrations
+### 4. Instalar dependências
+
+```bash
+npm install
+```
+
+Em produção:
+```bash
+npm install --omit=dev
+```
+
+### 5. Executar migrations
 
 ```bash
 npm run migrate
 ```
 
-Saída esperada:
-```
-✅ 001_create_usuarios.sql — executada com sucesso
-✅ 002_create_planos.sql   — executada com sucesso
-✅ 003_create_socios.sql   — executada com sucesso
-✅ 004_create_mensalidades.sql — executada com sucesso
+### 6. Conceder permissões nas tabelas
+
+No **Query Tool** do pgAdmin, conectado como `postgres`:
+
+```sql
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO app_chapecoense;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO app_chapecoense;
 ```
 
-### 6. Inserir dados iniciais
+### 7. Inserir dados iniciais
 
 ```bash
 npm run seed
 ```
 
-### 7. Iniciar o sistema
+### 8. Iniciar o sistema
 
 ```bash
 # Desenvolvimento
@@ -151,7 +155,6 @@ Acesse: **http://localhost:3000**
 ## Checklist de validação
 
 ```bash
-# Verificar se o servidor está respondendo
 curl http://localhost:3000/health
 ```
 
@@ -159,9 +162,10 @@ curl http://localhost:3000/health
 - [ ] `/health` retorna `{ "status": "ok" }`
 - [ ] Login com admin funciona
 - [ ] Dashboard exibe os cards de resumo
-- [ ] Lista de sócios exibe os 5 exemplos
-- [ ] Login com Cláudia (secretaria) não mostra menu de Usuários
-- [ ] Login com Rafael (financeiro) mostra menu de Mensalidades
+- [ ] Lista de sócios exibe 5 registros
+- [ ] Login com Cláudia não mostra menu de Usuários
+- [ ] Login com Rafael mostra menu de Mensalidades
+- [ ] Tabelas visíveis no pgAdmin
 
 ---
 
